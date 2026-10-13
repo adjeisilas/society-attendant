@@ -1,0 +1,89 @@
+/* Rendered outside the app shell: centred on the dark hero backdrop. */
+.fullPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-4);
+  background: var(--hero-bg);
+}
+
+.fullPage .panel {
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 32rem;
+  margin: var(--space-8) auto;
+  padding: var(--space-10) var(--space-8);
+  box-shadow: var(--shadow-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: var(--space-5);
+  border-radius: 50%;
+}
+
+.neutral {
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  box-shadow: 0 0 0 8px rgb(15 118 110 / 6%);
+}
+
+.danger {
+  background: var(--color-danger-subtle);
+  color: var(--color-danger);
+  box-shadow: 0 0 0 8px rgb(194 51 43 / 6%);
+}
+
+.warning {
+  background: var(--color-warning-subtle);
+  color: var(--color-warning);
+  box-shadow: 0 0 0 8px rgb(154 90 6 / 7%);
+}
+
+.title {
+  font-size: var(--text-xl);
+}
+
+.description {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: 12rem;
+  padding: var(--space-8);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.loading svg {
+  color: var(--color-primary);
+}

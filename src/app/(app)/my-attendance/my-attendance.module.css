@@ -1,0 +1,11 @@
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.footer {
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-surface-subtle);
+  border-top: 1px solid var(--color-border);
+}

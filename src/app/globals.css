@@ -1,0 +1,223 @@
+:root {
+  color-scheme: light;
+
+  --font-sans: var(--font-brand), "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-numerals), ui-monospace, "Cascadia Mono", Consolas, "Liberation Mono", monospace;
+
+  /* Surfaces and text */
+  --color-canvas: #eef3f1;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f6f9f8;
+  --color-surface-sunken: #e7eeeb;
+  --color-border: #dde6e3;
+  --color-border-strong: #c5d1cd;
+  --color-border-hover: #9fb0ab;
+  --color-text: #0f1f1e;
+  --color-text-muted: #4f5f5c;
+  --color-text-subtle: #83938f;
+  --color-row-hover: #f3f8f6;
+
+  /* Brand: clinical teal on deep ink */
+  --color-primary: #0f766e;
+  --color-primary-hover: #0b5d56;
+  --color-primary-subtle: #e2f3ef;
+  --color-primary-border: #b3ddd5;
+  --color-on-primary: #ffffff;
+  --color-accent: #5fd4c1;
+  --color-ink: #0b2427;
+  --color-ink-raised: #12353a;
+  --color-ink-hover: #164248;
+  --color-focus-ring: #0d9488;
+  --color-focus-shadow: rgb(13 148 136 / 22%);
+
+  /* Status */
+  --color-danger: #c2332b;
+  --color-danger-hover: #a0271f;
+  --color-danger-subtle: #fdeeec;
+  --color-danger-border: #f2c4bf;
+  --color-danger-shadow: rgb(194 51 43 / 16%);
+  --color-warning: #9a5a06;
+  --color-warning-subtle: #fdf4e2;
+  --color-warning-border: #efd39a;
+  --color-success: #15803d;
+  --color-success-hover: #106530;
+  --color-success-subtle: #e7f6ec;
+  --color-success-border: #b5e0c2;
+  --color-info: #1d64b0;
+  --color-info-subtle: #e9f1fb;
+  --color-info-border: #bcd4ef;
+
+  /* Shell: the dark frame around the content sheet */
+  --shell-bg: var(--color-ink);
+  --sidebar-text: rgb(255 255 255 / 72%);
+  --sidebar-text-strong: #ffffff;
+  --sidebar-text-muted: rgb(255 255 255 / 42%);
+  --sidebar-hover-bg: rgb(255 255 255 / 6%);
+  --sidebar-active-bg: rgb(95 212 193 / 14%);
+  --sidebar-active-text: #ffffff;
+  --sidebar-divider: rgb(255 255 255 / 9%);
+  --overlay-bg: rgb(6 22 24 / 55%);
+
+  /* Hero surfaces: the terminal and the sign-in pages */
+  --hero-bg:
+    radial-gradient(90% 70% at 0% 0%, #17494f 0%, rgb(23 73 79 / 0%) 60%),
+    radial-gradient(70% 60% at 100% 100%, #0f5b52 0%, rgb(15 91 82 / 0%) 65%),
+    var(--color-ink);
+  --hero-text: #ffffff;
+  --hero-text-muted: rgb(255 255 255 / 66%);
+  --hero-divider: rgb(255 255 255 / 12%);
+  --hero-card: rgb(255 255 255 / 6%);
+
+  /* Layout */
+  --sidebar-width: 17rem;
+  --topbar-height: 4.25rem;
+  --content-max-width: 86rem;
+  --frame-gap: 0.625rem;
+
+  /* Shape and depth */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 22px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgb(11 36 39 / 5%), 0 1px 3px rgb(11 36 39 / 4%);
+  --shadow-md: 0 14px 34px rgb(11 36 39 / 13%);
+  --shadow-lg: 0 28px 70px rgb(11 36 39 / 22%);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+
+  /* Type scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.55;
+  color: var(--color-text);
+  background: var(--color-canvas);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration-color: rgb(15 118 110 / 35%);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+  text-decoration-color: currentColor;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgb(95 212 193 / 35%);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+}
+
+/* Utilities */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  [data-print-hide] {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

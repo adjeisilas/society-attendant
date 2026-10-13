@@ -1,0 +1,28 @@
+.weekBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.legend {
+  margin-top: var(--space-5);
+}
+
+.legendList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+  padding: var(--space-4) var(--space-5);
+  list-style: none;
+}
+
+@media (max-width: 40rem) {
+  .weekBar,
+  .legendList {
+    padding-right: var(--space-4);
+    padding-left: var(--space-4);
+  }
+}

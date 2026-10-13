@@ -1,0 +1,37 @@
+.totals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  margin: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.totals > div {
+  padding: var(--space-5) var(--space-6);
+  border-left: 1px solid var(--color-border);
+}
+
+.totals > div:first-child {
+  border-left: 0;
+}
+
+.totals dt {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.totals dd {
+  margin: var(--space-1) 0 0;
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 40rem) {
+  .totals > div {
+    padding: var(--space-3) var(--space-4);
+  }
+}

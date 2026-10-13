@@ -1,0 +1,50 @@
+/* Shared layout for feature forms and form pages. */
+
+.narrow {
+  max-width: 52rem;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.fullRow {
+  grid-column: 1 / -1;
+}
+
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+  padding-top: var(--space-5);
+  border-top: 1px dashed var(--color-border-strong);
+}
+
+@media (max-width: 40rem) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

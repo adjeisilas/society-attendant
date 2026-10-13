@@ -1,0 +1,39 @@
+.card {
+  width: 100%;
+  max-width: 28rem;
+  padding: var(--space-10) var(--space-8) var(--space-8);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.header {
+  margin-bottom: var(--space-6);
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.description {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.footer {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px dashed var(--color-border-strong);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+@media (max-width: 30rem) {
+  .card {
+    padding: var(--space-6) var(--space-5);
+  }
+}

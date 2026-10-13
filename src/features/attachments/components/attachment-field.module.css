@@ -1,0 +1,50 @@
+.input {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1.5px dashed var(--color-primary-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-subtle);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition:
+    border-color 140ms ease,
+    background-color 140ms ease;
+}
+
+.input:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+}
+
+.input::file-selector-button {
+  margin-right: var(--space-3);
+  padding: 0.375rem var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  font-weight: 700;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.input:disabled {
+  background: var(--color-surface-subtle);
+  cursor: progress;
+}
+
+.attached {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-success-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-success-subtle);
+}
+
+.fileName {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

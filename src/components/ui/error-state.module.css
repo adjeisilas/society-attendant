@@ -1,0 +1,8 @@
+.reference {
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+}
+
+.reference code {
+  font-family: var(--font-mono);
+}

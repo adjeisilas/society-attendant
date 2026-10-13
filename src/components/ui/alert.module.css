@@ -1,0 +1,59 @@
+.alert {
+  position: relative;
+  display: flex;
+  gap: var(--space-3);
+  overflow: hidden;
+  padding: var(--space-3) var(--space-4) var(--space-3) calc(var(--space-4) + 3px);
+  line-height: 1.5;
+  border: 1px solid;
+  border-radius: var(--radius-lg);
+  color: var(--color-text);
+}
+
+/* The tone's colour as a rule down the leading edge. */
+.alert::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--alert-accent);
+  content: "";
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--alert-accent);
+}
+
+.content {
+  min-width: 0;
+}
+
+.title {
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.info {
+  --alert-accent: var(--color-info);
+  background: var(--color-info-subtle);
+  border-color: var(--color-info-border);
+}
+
+.success {
+  --alert-accent: var(--color-success);
+  background: var(--color-success-subtle);
+  border-color: var(--color-success-border);
+}
+
+.warning {
+  --alert-accent: var(--color-warning);
+  background: var(--color-warning-subtle);
+  border-color: var(--color-warning-border);
+}
+
+.danger {
+  --alert-accent: var(--color-danger);
+  background: var(--color-danger-subtle);
+  border-color: var(--color-danger-border);
+}

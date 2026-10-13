@@ -1,0 +1,38 @@
+.bell {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  transition:
+    border-color 140ms ease,
+    color 140ms ease,
+    background-color 140ms ease;
+}
+
+.bell:hover {
+  border-color: var(--color-primary-border);
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+}
+
+.count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  min-width: 1.25rem;
+  padding: 0 5px;
+  border: 2px solid var(--color-canvas);
+  border-radius: var(--radius-pill);
+  background: var(--color-danger);
+  color: var(--color-on-primary);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  line-height: 1rem;
+  text-align: center;
+}

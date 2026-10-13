@@ -1,0 +1,75 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-4);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.scanner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.video {
+  width: 100%;
+  max-width: 24rem;
+  aspect-ratio: 1;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #000;
+  object-fit: cover;
+}
+
+.scannerHint {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.summary dt {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.summary dd {
+  margin: var(--space-1) 0 0;
+  font-weight: 600;
+}
+
+.shiftList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shiftList li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.shiftList li:last-child {
+  border-bottom: 0;
+}
+
+.shiftTimes {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-muted);
+}
